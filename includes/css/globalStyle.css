@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+  header, main, footer, nav, aside, section, div  {
+  
+    display: block;
+  
+}
+header{
+    background-color:#3c74d1;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 70px;
+    display: block;  
+    margin-top: 5px;
+  }
+.web-nav{
+    display: flex;
+    gap:30px;
+    margin-top: 7px;
+}
+body {
+    background-color: #f1f1f1 !important;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: large;
+    
+}
+
+.profile{
+    background-image: url("../images/profile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    display: block;  
+    
+}
+.messege{
+  display: block;
+  width: 40px;
+  margin-top: 3px;
+}
+.active {
+    color: white;
+    font-weight: bolder;
+  }
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+  
+  .web-nav-list-item {
+    float: left;
+  }
+  
+  .web-nav-list-item > a {
+    display: block;
+    color:  #f1f1f1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: x-large;
+  }
+  .bar-active-item{
+    height: 100%;
+    width: 100%;
+  }
+  .bar-active-item > a{
+    display: block;
+    text-align:left;
+    /* width: 100%;
+    height: 100%; */
+    text-decoration: none;
+    font-size: x-large;
+  }
+  .web-nav-list-item > a:hover {
+    color: #cddaf2;
+  }
+  .bar-active-item > a:hover {
+    color: #cddaf2;
+  }
+ .hamburger-menu{
+  position: absolute;
+  display: none;
+  font-family: 'Cabin', Sans-serif;
+ }
+.bar-active{
+  visibility: hidden;
+  position: absolute;
+
+}
+.open{
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  padding-top: 20px;
+  background-color: #e7e7e7;
+  height: 600px;
+  width: max-content;
+  padding-right: 30px;
+
+  z-index: 1;
+}
+.header-right{
+  display: flex;
+  padding-top: 15px;
+  padding-right: 10px;
+}
+.setting{
+  display: flex;
+  gap:10px;
+}
+
+@media only screen and  (max-width: 1250px ){
+  .hamburger-menu{
+    position:relative;
+    display: block;
+    margin-top: 15px;
+    padding: 0;
+  }
+  .messege{
+    display: none;
+  }
+  .web-nav{
+    display: none;
+  }
+  footer{
+    display: none;
+  }
+}

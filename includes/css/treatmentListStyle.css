@@ -1,0 +1,90 @@
+.border-radius {
+    border-radius: 10px;
+    background-color: rgba(212, 227, 252, 1);
+}
+
+.text-size {
+    font-size: small;
+
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+
+.list-div {
+    width: 80%;
+    text-align: center;
+  }
+
+  .treatment-list-table {
+    background-color: #0d6efd40;
+    padding: 12px 24px 24px 24px;
+    border-collapse: separate;
+    border-spacing: 0px 25px;
+    border-radius: 10px;
+  }
+
+  .treatment-list-table tr {
+    border: 1px solid #0d6efd40;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 5px;
+  }
+
+
+  tbody tr {
+    background-color: white;
+  }
+
+  tbody tr:hover {
+    background-color: lightgray;
+    cursor: pointer;
+  }
+
+td {
+  border-style: solid none;
+  padding: 15px !important;
+  background-color: #0d6efd40;
+}
+td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 20px; 
+  border-bottom-left-radius: 20px;
+}
+td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 20px; 
+  border-top-right-radius: 20px; 
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.input-group {
+  width: 35vw;
+  padding: 0 24px;
+}
+
+.input-group input{
+  background-color: lightgray;
+  border-radius: 15px !important;
+  outline-width: 0;
+  height: 26px;
+}
+
+.bi {
+  cursor: pointer;
+}
+
+.bi:hover {
+  color: gray;
+}
+
+.input-group-append {
+  position: absolute;
+  right: 35px;
+  cursor: auto;
+}

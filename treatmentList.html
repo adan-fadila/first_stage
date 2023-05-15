@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/bfd6d1b072.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="includes/css/globalStyle.css">
+    <link rel="stylesheet" href="./includes/css/treatmentListStyle.css">
+    <script src="includes/js/globalScript.js"></script>
+    <script src="./includes/js/treatmentsScript.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
+    <title>Treatment List</title>
+</head>
+<body>
+  <header>
+    <nav class="hamburger-menu" id="hamburger-menu" onclick="openBar()">
+      <i class="fa-solid fa-bars fa-2xl"></i>
+      <ul class="bar-active" id="bar-active">
+         <li class="bar-active-item">
+            <a href="index.html">Home</a>
+         </li>
+         <li class="bar-active-item">
+            <a href="#" class="active">Treatments List</a>
+         </li>
+         <li class="bar-active-item">
+            <a href="./mainObject.html" >Treatment plan</a>
+         </li>
+         <li class="bar-active-item">
+            <a href="./form.html">New Treatment Request</a>
+         </li>
+         <li class="bar-active-item">
+          <a href="#">inbox</a>
+       </li>
+      </ul>
+      
+    </nav>
+    <a href="#" id="logo"> </a>
+    <nav class="web-nav"> 
+      <ul class="web-nav-list">
+        <li class="web-nav-list-item"><a href="index.html">Home</a></li>
+        <li class="web-nav-list-item"><a href="#"class="active">Treatments List</a></li>
+        <li class="web-nav-list-item"><a  href="mainObject.html">Treatment plan</a></li>
+        <li class="web-nav-list-item"><a  href="form.html">New Treatment Request</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="#"class="messege"><i class="fa-solid fa-message fa-lg" style="color: #ffffff;"></i></a>
+      <a href="#" class="profile"></a>
+      
+    </div>
+  </header>
+  <section class="vh-100 globalBackGround margin-auto">
+    <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 space-between">
+      <h4 class="fw-bold">My Treatments</h1>
+        <div class="input-group rounded">
+          <input type="search" class="form-control border-end-0 border rounded-pill" onkeyup="search()" placeholder="Search" aria-label="Search" aria-describedby="search-addon" id="searchText" />
+          <span class="input-group-append">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+        </span>
+        </div>
+      <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group mr-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-funnel mx-2" viewBox="0 0 16 16">
+            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-filter-left mx-2" viewBox="0 0 16 16">
+            <path d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <section class="d-flex row justify-content-center">
+      <div class="list-div table-responsive general-padding">
+        <table class="table treatment-list-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Treatment</th>
+              <th>Start-Date</th>
+              <th>Due-Date</th>
+              <th>Maore</th>
+          </tr>
+        </thead>
+        <tbody id="treatmentListBody">
+          <tr>
+            <td>1</td>
+            <td>workout</td>
+            <td>12/10/20</td>
+            <td>01/12/20</td>
+            <td>
+              <a href="./mainObject.html?treatmentId=1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>jump</td>
+            <td>22/07/20</td>
+            <td>16/11/20</td>
+            <td>
+              <a href="./mainObject.html?treatmentId=2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>sleep</td>
+            <td>10/03/20</td>
+            <td>15/07/20</td>
+            <td>
+              <a href="./mainObject.html?treatmentId=3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>work</td>
+            <td>07/02/20</td>
+            <td>02/03/20</td>
+            <td>
+              <a href="./mainObject.html?treatmentId=4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </section>
+  </section>
+  </section>
+  <footer>
+    <ul class="setting">
+      <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+      <li><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+  </footer>
+</body>
+</html>
